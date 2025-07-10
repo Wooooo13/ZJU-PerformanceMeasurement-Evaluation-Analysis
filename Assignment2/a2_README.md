@@ -20,7 +20,7 @@ echo none | sudo tee /sys/block/nvme0n1/queue/scheduler
 
 ## 安装JDK 路径`$HOME/22012820/jdks`
 设置`JDK_ROOT="$HOME/22012820/jdks"`
-- `openjdk 1.8.0_452` 在 `~/.bashrc`中已经配置
+- `openjdk 1.8.0_452` 在 `~/.bashrc`中配置
 - `Alibaba_Dragonwell_Standard_8.25.24_x64_linux` （dragonwell-8）下载地址[Dragonwell 8](https://dragonwell.oss-cn-shanghai.aliyuncs.com/8.25.24/Alibaba_Dragonwell_Standard_8.25.24_x64_linux.tar.gz)
 - `TencentKona8.0.22.b1_jdk_linux-x86_64_8u452` （TencentKona-8）下载地址[TencentKona-8](https://github.com/Tencent/TencentKona-8/releases/download/8.0.22-GA/TencentKona8.0.22.b1_jdk_linux-x86_64_8u452.tar.gz)
 - `bisheng-jdk-8u452-b12-linux-x64` （bisheng-8）下载地址[毕昇JDK 8](https://www.hikunpeng.com/developer/devkit/download/jdk)
