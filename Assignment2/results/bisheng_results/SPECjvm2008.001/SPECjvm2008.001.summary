@@ -1,0 +1,10 @@
+Report:      SPECjvm2008 Peak summary
+Result:      Noncompliant composite result: 1145.82 ops/m
+HW Model:    Intel, 13th Gen Intel Core i9-13900H
+HW CPU:      Intel, Intel(R) Core(TM) i9-13900H CPU @ 2.60GHz
+OS:          Ubuntu 22.04.5 LTS
+JVM:         BiSheng, OpenJDK 64-Bit Server VM, 25.452-b12 mixed mode
+JVM tuning:  n/a
+JVM startup:  
+Tester:      wwow, n/a
+Run date:    Sun Jul 06 06:47:03 CST 2025

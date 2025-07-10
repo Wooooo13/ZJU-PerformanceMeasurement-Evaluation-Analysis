@@ -1,0 +1,92 @@
+================================
+SPECjvm2008 Peak
+================================
+Intel 13th Gen Intel Core i9-13900H
+Tencent OpenJDK 64-Bit Server VM
+Tested by: n/a Test date: Sun Jul 06 06:23:59 CST 2025
+Run is valid, but not compliant
+
+================================
+compress                      1136.54                                 
+Noncompliant composite result: 1136.54 ops/m
+================================
+
+
+Submitter                     n/a                                     
+Submitter URL                 n/a                                     
+SPEC license                  n/a                                     
+Tester                        wwow                                    
+Location                      YourLocationHere                        
+Test date:                    Sun Jul 06 06:23:59 CST 2025            
+OS name                       Ubuntu 22.04.5 LTS                      
+OS available                  2022-04-21                              
+OS address bits               64                                      
+OS tuning                                                             
+Filesystem                    ext4                                    
+Other s/w name                                                        
+Other s/w tuning                                                      
+Other s/w available                                                   
+Vendor                        Tencent                                 
+Vendor URL                    http://jdk.oa.com/                      
+JVM name                      OpenJDK 64-Bit Server VM                
+JVM version                   25.452-b1 mixed mode, sharing           
+JVM available                 n/a                                     
+Java Specification            1.8                                     
+JVM address bits              64                                      
+JVM initial heap memory       n/a                                     
+JVM maximum heap memory       n/a                                     
+JVM command line              n/a                                     
+JVM command line startup                                              
+JVM launcher startup          default                                 
+Additional JVM tuning         OpenJDK Runtime Environment (Tencent Kona 8.0.22) (build 1.8.0_452-b1)
+JVM class path                /home/wwow/SPECjvm2008/SPECjvm2008.jar  
+JVM boot class path           /opt/jdks/TencentKona-8/jre/lib/resources.jar:/opt/jdks/TencentKona-8/jre/lib/rt.jar:/opt/jdks/TencentKona-8/jre/lib/sunrsasign.jar:/opt/jdks/TencentKona-8/jre/lib/jsse.jar:/opt/jdks/TencentKona-8/jre/lib/jce.jar:/opt/jdks/TencentKona-8/jre/lib/charsets.jar:/opt/jdks/TencentKona-8/jre/lib/jfr.jar:/opt/jdks/TencentKona-8/jre/classes
+HW vendor                     Intel                                   
+HW vendor's URL               https://www.intel.com/                  
+HW model                      13th Gen Intel Core i9-13900H           
+HW available                  2023-01-01                              
+CPU vendor                    Intel                                   
+CPU vendor's URL              https://www.intel.com/                  
+CPU name                      Intel(R) Core(TM) i9-13900H CPU @ 2.60GHz
+CPU frequency                 2600                                    
+# of logical cpus             20                                      
+# of chips                    1                                       
+# of cores                    10                                      
+Cores per chip                10                                      
+Threads per core              2                                       
+Threading enabled             true                                    
+HW address bits               64                                      
+Primary cache                 480KB (Data) + 320KB (Instruction)      
+Secondary cache               12.5MB                                  
+Other cache                   24MB (L3)                               
+Memory size                   7680                                    
+Memory details                7.6GB DDR4 (shared with system)         
+Other HW details              n/a                                     
+
+Property specjvm.maxiter must be 1 for publication.
+Property specjvm.miniter must be 1 for publication.
+Not a compliant sequence of benchmarks for publication.
+Property specjvm.run.checksum.validation must be true for publication.
+Property specjvm.runmode unknown.
+
+specjvm.additional.properties.file=./props/tencentkona.reporter.properties
+specjvm.home.dir=/home/wwow/SPECjvm2008
+specjvm.propfile=/home/wwow/test_SPECjvm/props/tencentkona.properties
+specjvm.result.dir=/home/wwow/test_SPECjvm/results/tencentkona_results
+
+Details of Runs
+---------------
+PASSED
+
+Benchmark                     Iteration      Expected(ms)   Actual(ms)     Operations     ops/m          
+---------------------------------------------------------------------------------------------------
+
+compress                      warmup         120000         120000         2274.27        1137.13        
+compress                      iteration 1    240000         240000         4514.21        1128.55        
+compress                      iteration 2    240000         240000         4546.17        1136.54        
+compress                      iteration 3    240000         240000         4520.89        1130.22        
+compress                      iteration 4    240000         240000         4542.17        1135.54        
+compress                      iteration 5    240000         240000         4507.68        1126.92        
+
+SPECjvm2008 Version: [SPECjvm2008 1.01 (20090519)]
+Copyright (C) 2008-2025 SPEC. All rights reserved

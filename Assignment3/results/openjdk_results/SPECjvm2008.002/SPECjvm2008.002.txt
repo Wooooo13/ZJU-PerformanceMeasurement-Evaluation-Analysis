@@ -1,0 +1,92 @@
+================================
+SPECjvm2008 Peak
+================================
+n/a n/a
+Private Build OpenJDK 64-Bit Server VM
+Tested by: n/a Test date: Thu Jul 10 18:38:02 CST 2025
+Run is valid, but not compliant
+
+================================
+compress                      1757.82                                 
+Noncompliant composite result: 1757.82 ops/m
+================================
+
+
+Submitter                     n/a                                     
+Submitter URL                 n/a                                     
+SPEC license                  n/a                                     
+Tester                        wwow                                    
+Location                      YourLocationHere                        
+Test date:                    Thu Jul 10 18:38:02 CST 2025            
+OS name                       Ubuntu 22.04.5 LTS                      
+OS available                  2022-04-21                              
+OS address bits               64                                      
+OS tuning                                                             
+Filesystem                    ext4                                    
+Other s/w name                                                        
+Other s/w tuning                                                      
+Other s/w available                                                   
+Vendor                        Private Build                           
+Vendor URL                    http://java.oracle.com/                 
+JVM name                      OpenJDK 64-Bit Server VM                
+JVM version                   25.452-b09 mixed mode                   
+JVM available                 n/a                                     
+Java Specification            1.8                                     
+JVM address bits              64                                      
+JVM initial heap memory       n/a                                     
+JVM maximum heap memory       n/a                                     
+JVM command line              n/a                                     
+JVM command line startup                                              
+JVM launcher startup          default                                 
+Additional JVM tuning         OpenJDK Runtime Environment (build 1.8.0_452-8u452-ga~us1-0ubuntu1~22.04-b09)
+JVM class path                /home/estudent1/22012820/SPECjvm2008/SPECjvm2008.jar
+JVM boot class path           /home/estudent1/22012820/jdks/openjdk-8/jre/lib/resources.jar:/home/estudent1/22012820/jdks/openjdk-8/jre/lib/rt.jar:/home/estudent1/22012820/jdks/openjdk-8/jre/lib/sunrsasign.jar:/home/estudent1/22012820/jdks/openjdk-8/jre/lib/jsse.jar:/home/estudent1/22012820/jdks/openjdk-8/jre/lib/jce.jar:/home/estudent1/22012820/jdks/openjdk-8/jre/lib/charsets.jar:/home/estudent1/22012820/jdks/openjdk-8/jre/lib/jfr.jar:/home/estudent1/22012820/jdks/openjdk-8/jre/classes
+HW vendor                     n/a                                     
+HW vendor's URL               n/a                                     
+HW model                      n/a                                     
+HW available                  n/a                                     
+CPU vendor                    AMD                                     
+CPU vendor's URL              https://www.amd.com/                    
+CPU name                      AMD EPYC 7343 16-Core Processor         
+CPU frequency                 3940                                    
+# of logical cpus             64                                      
+# of chips                    2                                       
+# of cores                    32                                      
+Cores per chip                16                                      
+Threads per core              2                                       
+Threading enabled             true                                    
+HW address bits               64                                      
+Primary cache                 32KB (Data) + 32KB (Instruction)        
+Secondary cache               512KB                                   
+Other cache                   32MB (L3 per CCX)                       
+Memory size                   524288                                  
+Memory details                512GB DDR4 RDIMM                        
+Other HW details              n/a                                     
+
+Property specjvm.maxiter must be 1 for publication.
+Property specjvm.miniter must be 1 for publication.
+Not a compliant sequence of benchmarks for publication.
+Property specjvm.run.checksum.validation must be true for publication.
+Property specjvm.runmode unknown.
+
+specjvm.additional.properties.file=./props/openjdk.reporter.properties
+specjvm.home.dir=/home/estudent1/22012820/SPECjvm2008
+specjvm.propfile=/home/estudent1/22012820/test_SPECjvm/Assignment3/props/openjdk.properties
+specjvm.result.dir=./results/openjdk_results
+
+Details of Runs
+---------------
+PASSED
+
+Benchmark                     Iteration      Expected(ms)   Actual(ms)     Operations     ops/m          
+---------------------------------------------------------------------------------------------------
+
+compress                      warmup         120000         120000         1087.05        543.52         
+compress                      iteration 1    240000         240000         2382.03        595.51         
+compress                      iteration 2    240000         240000         2334.72        583.68         
+compress                      iteration 3    240000         240000         2342.51        585.63         
+compress                      iteration 4    240000         240000         3430.33        857.58         
+compress                      iteration 5    240000         240000         7031.26        1757.82        
+
+SPECjvm2008 Version: [SPECjvm2008 1.01 (20090519)]
+Copyright (C) 2008-2025 SPEC. All rights reserved

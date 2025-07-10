@@ -1,0 +1,186 @@
+================================
+SPECjvm2008 Base
+================================
+Intel 13th Gen Intel Core i9-13900H
+Private Build OpenJDK 64-Bit Server VM
+Tested by: n/a Test date: Sat Jul 05 07:19:18 CST 2025
+Run is valid, but not compliant
+
+================================
+compiler                      1962.79                                 
+compress                      1042.02                                 
+crypto                        2270                                    
+derby                         2064.93                                 
+mpegaudio                     839.2                                   
+scimark.large                 180.75                                  
+scimark.small                 1740.46                                 
+serial                        954.7                                   
+startup                       61.4                                    
+sunflow                       492.96                                  
+xml                           2833.29                                 
+Noncompliant composite result: 866.68 ops/m
+================================
+
+
+Submitter                     n/a                                     
+Submitter URL                 n/a                                     
+SPEC license                  n/a                                     
+Tester                        wwow                                    
+Location                      YourLocationHere                        
+Test date:                    Sat Jul 05 07:19:18 CST 2025            
+OS name                       Ubuntu 22.04.5 LTS                      
+OS available                  2022-04-21                              
+OS address bits               64                                      
+OS tuning                                                             
+Filesystem                    ext4                                    
+Other s/w name                                                        
+Other s/w tuning                                                      
+Other s/w available                                                   
+Vendor                        Private Build                           
+Vendor URL                    http://java.oracle.com/                 
+JVM name                      OpenJDK 64-Bit Server VM                
+JVM version                   1.8.0_452                               
+JVM available                 n/a                                     
+Java Specification            1.8                                     
+JVM address bits              64                                      
+JVM initial heap memory       n/a                                     
+JVM maximum heap memory       n/a                                     
+JVM command line              java -jar SPECjvm2008.jar               
+JVM command line startup                                              
+JVM launcher startup          default                                 
+Additional JVM tuning                                                 
+JVM class path                SPECjvm2008.jar                         
+JVM boot class path           /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/classes
+HW vendor                     Intel                                   
+HW vendor's URL               https://www.intel.com/                  
+HW model                      13th Gen Intel Core i9-13900H           
+HW available                  2023-01-01                              
+CPU vendor                    Intel                                   
+CPU vendor's URL              https://www.intel.com/                  
+CPU name                      Intel(R) Core(TM) i9-13900H CPU @ 2.60GHz
+CPU frequency                 2600                                    
+# of logical cpus             20                                      
+# of chips                    1                                       
+# of cores                    10                                      
+Cores per chip                10                                      
+Threads per core              2                                       
+Threading enabled             true                                    
+HW address bits               64                                      
+Primary cache                 480KB (Data) + 320KB (Instruction)      
+Secondary cache               12.5MB                                  
+Other cache                   24MB (L3)                               
+Memory size                   7680                                    
+Memory details                7.6GB DDR4 (shared with system)         
+Other HW details              n/a                                     
+
+Property specjvm.runmode unknown.
+
+specjvm.additional.properties.file=sysinfo.properties
+specjvm.propfile=runparams.properties
+
+Details of Runs
+---------------
+PASSED
+
+Benchmark                     Iteration      Expected(ms)   Actual(ms)     Operations     ops/m          
+---------------------------------------------------------------------------------------------------
+
+compiler.compiler             warmup         120000         120000         5852.18        2926.09        
+compiler.compiler             iteration 1    240000         240000         12462.36       3115.59        
+
+compiler.sunflow              warmup         120000         120000         2472.73        1236.37        
+compiler.sunflow              iteration 1    240000         240000         4946.17        1236.54        
+
+compress                      warmup         120000         120000         2070.53        1035.27        
+compress                      iteration 1    240000         240000         4168.07        1042.02        
+
+crypto.aes                    warmup         120000         120000         987.73         493.87         
+crypto.aes                    iteration 1    240000         240000         1995.78        498.95         
+
+crypto.rsa                    warmup         120000         120000         16041.02       8020.51        
+crypto.rsa                    iteration 1    240000         240000         31991.64       7997.91        
+
+crypto.signverify             warmup         120000         120000         5847.80        2923.90        
+crypto.signverify             iteration 1    240000         240000         11724.78       2931.20        
+
+derby                         warmup         120000         120000         4112.97        2056.48        
+derby                         iteration 1    240000         240000         8259.71        2064.93        
+
+mpegaudio                     warmup         120000         120000         1672.20        836.10         
+mpegaudio                     iteration 1    240000         240000         3356.79        839.20         
+
+scimark.fft.large             warmup         120000         120000         341.64         170.82         
+scimark.fft.large             iteration 1    240000         240000         740.44         185.11         
+
+scimark.lu.large              warmup         120000         120000         64.48          32.24          
+scimark.lu.large              iteration 1    240000         240000         129.62         32.40          
+
+scimark.sor.large             warmup         120000         120000         349.75         174.87         
+scimark.sor.large             iteration 1    240000         240000         690.23         172.56         
+
+scimark.sparse.large          warmup         120000         120000         233.99         116.99         
+scimark.sparse.large          iteration 1    240000         240000         467.22         116.80         
+
+scimark.monte_carlo           warmup         120000         120000         2967.36        1483.68        
+scimark.monte_carlo           iteration 1    240000         240000         6382.70        1595.68        
+
+scimark.fft.small             warmup         120000         120000         4632.11        2316.06        
+scimark.fft.small             iteration 1    240000         240000         9344.00        2336.00        
+
+scimark.lu.small              warmup         120000         120000         6902.69        3451.35        
+scimark.lu.small              iteration 1    240000         240000         13771.23       3442.81        
+
+scimark.sor.small             warmup         120000         120000         2387.16        1193.58        
+scimark.sor.small             iteration 1    240000         240000         4795.95        1198.99        
+
+scimark.sparse.small          warmup         120000         120000         2173.44        1086.72        
+scimark.sparse.small          iteration 1    240000         240000         4151.79        1037.95        
+
+serial                        warmup         120000         120000         1929.07        964.53         
+serial                        iteration 1    240000         240000         3818.80        954.70         
+
+startup.helloworld            iteration 1    null           131            1.00           458.02         
+
+startup.compiler.compiler     iteration 1    null           1921           1.00           31.23          
+
+startup.compiler.sunflow      iteration 1    null           75193          1.00           0.80           
+
+startup.compress              iteration 1    null           796            1.00           75.38          
+
+startup.crypto.aes            iteration 1    null           1456           1.00           41.21          
+
+startup.crypto.rsa            iteration 1    null           269            1.00           223.05         
+
+startup.crypto.signverify     iteration 1    null           457            1.00           131.29         
+
+startup.mpegaudio             iteration 1    null           894            1.00           67.11          
+
+startup.scimark.fft           iteration 1    null           408            1.00           147.06         
+
+startup.scimark.lu            iteration 1    null           302            1.00           198.68         
+
+startup.scimark.monte_carlo   iteration 1    null           1033           1.00           58.08          
+
+startup.scimark.sor           iteration 1    null           771            1.00           77.82          
+
+startup.scimark.sparse        iteration 1    null           583            1.00           102.92         
+
+startup.serial                iteration 1    null           960            1.00           62.50          
+
+startup.sunflow               iteration 1    null           766            1.00           78.33          
+
+startup.xml.transform         iteration 1    null           9259           1.00           6.48           
+
+startup.xml.validation        iteration 1    null           719            1.00           83.45          
+
+sunflow                       warmup         120000         120000         980.62         490.31         
+sunflow                       iteration 1    240000         240000         1971.86        492.96         
+
+xml.transform                 warmup         120000         120000         3806.35        1903.17        
+xml.transform                 iteration 1    240000         240000         7688.10        1922.03        
+
+xml.validation                warmup         120000         120000         8297.97        4148.98        
+xml.validation                iteration 1    240000         240000         16706.44       4176.61        
+
+SPECjvm2008 Version: [SPECjvm2008 1.01 (20090519)]
+Copyright (C) 2008-2025 SPEC. All rights reserved

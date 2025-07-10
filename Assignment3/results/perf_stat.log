@@ -1,0 +1,12 @@
+
+ Performance counter stats for process id '174255':
+
+ 2,692,106,481,075      cycles                                                                  (83.33%)
+ 3,651,609,131,880      instructions                     #    1.36  insn per cycle              (83.33%)
+   539,905,884,559      branches                                                                (83.34%)
+    19,450,616,037      branch-misses                    #    3.60% of all branches             (83.34%)
+   213,885,247,261      cache-references                                                        (83.34%)
+    47,799,047,849      cache-misses                     #   22.35% of all cache refs           (83.33%)
+
+      60.010921926 seconds time elapsed
+
