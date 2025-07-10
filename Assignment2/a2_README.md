@@ -25,6 +25,33 @@ echo none | sudo tee /sys/block/nvme0n1/queue/scheduler
 - `TencentKona8.0.22.b1_jdk_linux-x86_64_8u452` （TencentKona-8）下载地址[TencentKona-8](https://github.com/Tencent/TencentKona-8/releases/download/8.0.22-GA/TencentKona8.0.22.b1_jdk_linux-x86_64_8u452.tar.gz)
 - `bisheng-jdk-8u452-b12-linux-x64` （bisheng-8）下载地址[毕昇JDK 8](https://www.hikunpeng.com/developer/devkit/download/jdk)
 
+**Openjdk**
+```
+openjdk version "1.8.0_452"
+OpenJDK Runtime Environment (build 1.8.0_452-8u452-ga~us1-0ubuntu1~22.04-b09)
+OpenJDK 64-Bit Server VM (build 25.452-b09, mixed mode)
+```
+
+**Dragonwell**
+```
+openjdk version "1.8.0_452"
+OpenJDK Runtime Environment (Alibaba Dragonwell Standard Edition 8.25.24) (build 1.8.0_452-b01)
+OpenJDK 64-Bit Server VM (Alibaba Dragonwell Standard Edition 8.25.24) (build 25.452-b01, mixed mode)
+```
+
+**Tencent Kona**
+```
+openjdk version "1.8.0_452"
+OpenJDK Runtime Environment (Tencent Kona 8.0.22) (build 1.8.0_452-b1)
+OpenJDK 64-Bit Server VM (Tencent Kona 8.0.22) (build 25.452-b1, mixed mode, sharing)
+```
+
+**BiSheng**
+```
+openjdk version "1.8.0_452"
+OpenJDK Runtime Environment BiSheng (build 1.8.0_452-b12)
+OpenJDK 64-Bit Server VM BiSheng (build 25.452-b12, mixed mode)
+```
 --------------------------
 
 项目结构
@@ -192,11 +219,11 @@ specjvm.miniter=5
 specjvm.maxiter=5
 ```
 
-在Assignment2下运行`./src/runspecjvm.sh`启动测试，测试结果保存在`./results`目录下
+在Assignment2下运行`./src/runspecjvm.sh`启动测试，测试结果保存在`./results`目录下的`SPECjvm2008.002`
 
 ---
 
-`analyze.py`用于画图和分析`compress_ops_bar.png`
+`analyze.py`用于画图和分析  
 安装相关的包
 ```
 pip install numpy pandas matplotlib seaborn scipy pingouin
@@ -277,7 +304,7 @@ python3 analyze.py SPECjvm2008.002
 |--------|-------|-------|------------|-----------|-----------|-----------|
 | JDK    | 3     | 12    | 91.824207  | 1.523528e-08  | 0.93697  | 0.807534  |
 
-p = 1.523528e-08 << 0.05 = α,可以认为各组间性能有显著差异，故进一步使用Holm-Bonferroni校正完成事后检验，结果如下：
+p = 1.523528e-08 << 0.01 = α,可以认为各组间性能有显著差异，故进一步使用Holm-Bonferroni校正完成事后检验，结果如下：
 
 | A                    | B                 | p-corr   | Hedges’ g    |
 |----------------------|-------------------|----------|--------------|
@@ -288,7 +315,7 @@ p = 1.523528e-08 << 0.05 = α,可以认为各组间性能有显著差异，故�
 | Huawei_Bisheng       | Tencent_Kona      | 0.000970 | 7.922170     |
 | OpenJDK              | Tencent_Kona      | 0.087636 | -1.917541    |
 
-认为显著性水平α = 0.05，效应量小、中等、大的典型值分别为0.2、0.5、1，由此具体分析每组的结果：
+认为显著性水平α = 0.01，效应量小、中等、大的典型值分别为0.2、0.5、1，由此具体分析每组的结果：
 
 | 对比组                     | 结论与解读                               |
 |---------------------------|----------------------------------------|
