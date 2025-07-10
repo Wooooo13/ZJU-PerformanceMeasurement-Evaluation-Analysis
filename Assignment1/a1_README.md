@@ -160,6 +160,7 @@ java -Xmx400m -jar SPECjvm2008.jar
 
 - **Did you get close to 100% CPU utilization running SPECjvm2008? Why or why not?**  
 - **CPU 利用率是否接近 100%？为什么？**
+  ![top性能监测](./top.png)
 
   us + sy = 96.6%，说明系统绝大部分时间都在执行计算任务
   PID 为 26771 的 java 进程占用了 1323.2% CPU → 表明它使用了约 13 个线程或核心并发运行（在多核系统中每个核心是 100%）；
