@@ -16,7 +16,7 @@
   - 总量：512 GiB DDR4 RDIMM
 
 - **存储**  
-  - NVMe SSD（型号与容量依据实际环境填写，例如 Samsung PM1733 2 TB）
+  - NVMe SSD
 
 #### 2. 软件环境
 
