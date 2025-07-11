@@ -354,19 +354,19 @@ $$
 
 ## Bonus Points
 Answer the following questions. Deep analysis is welcome.
-1. **Why is there run to run performance variation?**
-   **为什么不同运行（run）之间会出现性能波动？**
+1. **Why is there run to run performance variation?**  
+   **为什么不同运行（run）之间会出现性能波动？**  
    不同运行之间存在性能波动，是因为现代计算环境本质上是非确定性的：操作系统可能插入后台任务，JIT 编译和垃圾回收在不同时间点触发，CPU 缓存、TLB 和分支预测器的“热身”状态各不相同，甚至功耗管理和温度调节也会动态改变处理器频率，这些因素共同造成同一基准在多次执行时产生不同的测量结果。
-2. **What contributes to run-to-run variation?**
-   **哪些因素会导致这种运行间（run-to-run）的性能差异？**
+2. **What contributes to run-to-run variation?**  
+   **哪些因素会导致这种运行间（run-to-run）的性能差异？**  
    跑分抖动的主要来源包括：操作系统调度与中断、后台 daemon、I/O 活动对 CPU 的抢占；JIT 编译何时优化热点方法以及垃圾回收何时暂停应用；缓存和 TLB 冷/热状态下的内存访问差异；处理器的功耗/温度管理（如 Turbo Boost）导致的主频变化；以及硬件中断、上下文切换等微观事件对基准线程的干扰。
-3. **How do we validate the factors contributing to run-to-run variation?**
-   **我们如何验证这些因素对性能波动的影响？**
+3. **How do we validate the factors contributing to run-to-run variation?**  
+   **我们如何验证这些因素对性能波动的影响？**  
    验证这些抖动因素通常需要受控实验：通过绑定线程到固定核、关闭频率调节（固定 P-态）来排除调度与功耗影响；丢弃预热迭代以稳定缓存和 JIT；开启 GC/JIT 日志、使用硬件性能计数器（缓存未命中、分支预测失败、上下文切换等）来关联性能异常；以及有选择地打开或关闭子系统，再比较运行间抖动幅度，以量化各子系统对性能变异的贡献。
-4. **What are the pros and cons of using arithmetic mean versus geometric mean in summarizing scores?**
-   **在汇总多个分数时，使用算术平均数与几何平均数各有什么优缺点？**
+4. **What are the pros and cons of using arithmetic mean versus geometric mean in summarizing scores?**  
+   **在汇总多个分数时，使用算术平均数与几何平均数各有什么优缺点？**  
   算数平均数计算简单直观，适合可加性(additive)良好的独立数据；而几何平均数则计算较为复杂，适合描述比例数据或具有“乘性“(multiplicative)数据的特征。同时由于运算性质，几何平均数的对数等于各数据对数的算术平均数，在处理异常数据时，几何平均数对极端大值不敏感，对接近0的极端小值敏感；算数平均数则相反。
-5. **Why does SPECjvm2008 use geometric mean? (In fact, it uses hierarchical geometric mean)**
-   **为什么 SPECjvm2008 采用几何平均数？（实际上，它使用分层几何平均数）**
+5. **Why does SPECjvm2008 use geometric mean? (In fact, it uses hierarchical geometric mean)**  
+   **为什么 SPECjvm2008 采用几何平均数？（实际上，它使用分层几何平均数）**  
    SPECjvm2008 采用分层几何平均，一方面因为各子基准输出的是“参考时间÷测量时间”的比率，几何平均才能保持加速／减速的对称与公平；另一方面它先在每个基准组内做一次几何平均，再对所有组的分数再做一次几何平均，保证没有某一组因子基准数量或时长不同而主导整体结果，从而得到更均衡、公正的综合性能评分。
    由于计算ops/m时的典型数据总是远大于1，故用几何平均数能拥有更好的鲁棒性，对异常数据不敏感。
